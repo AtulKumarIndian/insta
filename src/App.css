@@ -1,0 +1,137 @@
+/* Ensure the whole component is mobile-friendly */
+.story-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.header {
+  width: 100%;
+  padding: 10px 0;
+  background-color: white;
+  border-bottom: 1px solid rgb(142, 124, 124);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.instagram-heading {
+  font-family: 'Billabong', cursive;
+  font-size: 1.5rem; /* Medium-sized font */
+  color: #262626;
+  position: fixed;;
+  margin: 0 10px; /* Add some margin to the left */
+}
+
+/* Horizontal scrollable list */
+.story-list {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+  gap: 8px;
+  width: 100%;
+  scrollbar-width: none; /* Hide scrollbar for better UX */
+}
+
+.story-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Thumbnails */
+.story-thumbnail {
+  width: calc((100vw - 32px) / 3); /* Adjust width to fit 3 thumbnails in viewport */
+  height: calc((100vw - 32px) / 3); /* Adjust height to maintain aspect ratio */
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.story-thumbnail:hover {
+  transform: scale(1.1);
+}
+
+/* Story viewer (full screen) */
+.story-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Progress bar */
+.progress-bar {
+  position: absolute;
+  top: 10px;
+  width: 90%;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2.5px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: white;
+  transition: width 0.1s linear;
+}
+
+/* Story image */
+.story-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Loading effect */
+.loading {
+  color: white;
+  font-size: 18px;
+  position: absolute;
+}
+
+/* Tap zones for navigation */
+.story-viewer::before,
+.story-viewer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+}
+
+.story-viewer::before {
+  left: 0;
+}
+
+.story-viewer::after {
+  right: 0;
+}
+
+/* Media queries for small devices */
+@media (max-width: 600px) {
+  .story-list {
+    padding: 5px;
+    gap: 4px;
+    max-width: 100%;
+  }
+
+  .story-thumbnail {
+    width: calc((100vw - 20px) / 3); /* Adjust width to fit 3 thumbnails in viewport */
+    height: calc((100vw - 20px) / 3); /* Adjust height to maintain aspect ratio */
+  }
+
+  .loading {
+    font-size: 16px;
+  }
+}

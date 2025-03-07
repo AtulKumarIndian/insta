@@ -1,0 +1,26 @@
+[
+  {
+    "thumbnail": "/IMG_0476.jpg",
+    "image": "./public/IMG_0476.jpg"
+  },
+  {
+    "thumbnail": "/IMG_0477.jpg",
+    "image": "./public/IMG_0477.jpg"
+  },
+  {
+    "thumbnail": "/IMG_0477.jpg",
+    "video": "./public/1ef486702d9b4fcfa54d032466765a9b.MP4"
+    },
+    {
+      "thumbnail": "/IMG_0476.jpg",
+      "image": "./public/IMG_0476.jpg"
+    },
+    {
+      "thumbnail": "/IMG_0477.jpg",
+      "image": "./public/IMG_0477.jpg"
+    },
+    {
+      "thumbnail": "/IMG_0477.jpg",
+      "video": "./public/1ef486702d9b4fcfa54d032466765a9b.MP4"
+      }
+]
