@@ -92,7 +92,6 @@ const App = () => {
                 <video
                   src={stories[currentStoryIndex].video}
                   autoPlay
-                  muted
                   loop
                   className="story-video"
                 />

@@ -1,4 +1,3 @@
-/* Ensure the whole component is mobile-friendly */
 .story-container {
   display: flex;
   flex-direction: column;
@@ -18,14 +17,13 @@
 }
 
 .instagram-heading {
-  font-family: 'Billabong', cursive;
-  font-size: 1.5rem; /* Medium-sized font */
-  color: #262626;
+  font-family: 'verdana', cursive;
+  font-size: 1.5rem; 
+  color: black;
   position: fixed;;
-  margin: 0 10px; /* Add some margin to the left */
+  margin: 0 10px; 
 }
 
-/* Horizontal scrollable list */
 .story-list {
   display: flex;
   overflow-x: auto;
@@ -33,17 +31,16 @@
   padding: 10px;
   gap: 8px;
   width: 100%;
-  scrollbar-width: none; /* Hide scrollbar for better UX */
+  scrollbar-width: none; 
 }
 
 .story-list::-webkit-scrollbar {
   display: none;
 }
 
-/* Thumbnails */
 .story-thumbnail {
-  width: calc((100vw - 32px) / 3); /* Adjust width to fit 3 thumbnails in viewport */
-  height: calc((100vw - 32px) / 3); /* Adjust height to maintain aspect ratio */
+  width: calc((100vw - 32px) / 3); 
+  height: calc((100vw - 32px) / 3); 
   border-radius: 50%;
   object-fit: cover;
   cursor: pointer;
@@ -54,7 +51,6 @@
   transform: scale(1.1);
 }
 
-/* Story viewer (full screen) */
 .story-viewer {
   position: fixed;
   top: 0;
@@ -68,24 +64,6 @@
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-/* Progress bar */
-.progress-bar {
-  position: absolute;
-  top: 10px;
-  width: 90%;
-  height: 5px;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 2.5px;
-  overflow: hidden;
-}
-
-.progress {
-  height: 100%;
-  background-color: white;
-  transition: width 0.1s linear;
-}
-
-/* Story image */
 .story-image {
   width: 100%;
   height: 100%;
@@ -93,14 +71,6 @@
   transition: opacity 0.5s ease-in-out;
 }
 
-/* Loading effect */
-.loading {
-  color: white;
-  font-size: 18px;
-  position: absolute;
-}
-
-/* Tap zones for navigation */
 .story-viewer::before,
 .story-viewer::after {
   content: "";
@@ -116,22 +86,4 @@
 
 .story-viewer::after {
   right: 0;
-}
-
-/* Media queries for small devices */
-@media (max-width: 600px) {
-  .story-list {
-    padding: 5px;
-    gap: 4px;
-    max-width: 100%;
-  }
-
-  .story-thumbnail {
-    width: calc((100vw - 20px) / 3); /* Adjust width to fit 3 thumbnails in viewport */
-    height: calc((100vw - 20px) / 3); /* Adjust height to maintain aspect ratio */
-  }
-
-  .loading {
-    font-size: 16px;
-  }
 }
