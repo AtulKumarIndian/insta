@@ -16,7 +16,7 @@ const App = () => {
     if (currentStoryIndex !== null) {
       timer = setTimeout(() => {
         goNextStory();
-      }, 5000); // Auto-advance every 5 seconds
+      }, 10000);
     }
     return () => clearTimeout(timer);
   }, [currentStoryIndex]);
@@ -24,7 +24,7 @@ const App = () => {
   const startStory = (index) => {
     setLoading(true);
     setCurrentStoryIndex(index);
-    setTimeout(() => setLoading(false), 500); // Simulate loading time
+    setLoading(false); // Simulate loading time
   };
 
   const goNextStory = () => {
