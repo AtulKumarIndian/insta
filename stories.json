@@ -1,0 +1,23 @@
+[
+  {
+    "thumbnail": "img_1.jpg",
+    "image": "img_1.jpg"
+  },
+  {
+    "thumbnail": "img_2.jpg",
+    "image": "img_2.jpg"
+  },
+
+  {
+    "thumbnail": "ss_1.png",
+    "video": "vid_1.MP4"
+  },
+  {
+    "thumbnail": "ss_2.png",
+    "video": "vid_2.MP4"
+  },
+  {
+    "thumbnail": "ss_3.png",
+    "video": "vid_3.MP4"
+  }
+]
